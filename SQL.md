@@ -7,7 +7,6 @@
   ```
  </details>
 
-<br>
 
 ### 1️⃣ Users:
 <details>
