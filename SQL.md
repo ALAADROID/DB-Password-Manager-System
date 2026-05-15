@@ -59,9 +59,9 @@
   ```sql
   CREATE TABLE Accounts (
       accountID INT PRIMARY KEY,
-      userID INT,
-      websiteID INT,
-      loginEmail VARCHAR(100),
+      userID INT UNIQUE,
+      websiteID INT UNIQUE,
+      loginEmail VARCHAR(100) UNIQUE,
       createdAt DATE,
   
       FOREIGN KEY (userID)
@@ -80,7 +80,7 @@
   ```sql
   CREATE TABLE Passwords (
       passwordID INT PRIMARY KEY,
-      accountID INT,
+      accountID INT UNIQUE,
       encryptedPassword VARCHAR(255) NOT NULL,
       lastUpdated DATE,
   
