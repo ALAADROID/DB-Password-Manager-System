@@ -58,18 +58,21 @@
 
   ```sql
   CREATE TABLE Accounts (
-      accountID INT PRIMARY KEY,
-      userID INT UNIQUE,
-      websiteID INT UNIQUE,
-      loginEmail VARCHAR(100) UNIQUE,
-      createdAt DATE,
-  
-      FOREIGN KEY (userID)
-      REFERENCES Users(userID),
-  
-      FOREIGN KEY (websiteID)
-      REFERENCES Websites(websiteID)
-  );
+    accountID INT PRIMARY KEY,
+    userID INT,
+    websiteID INT,
+    loginEmail VARCHAR(100),
+    createdAt DATE,
+
+    FOREIGN KEY (userID)
+    REFERENCES Users(userID),
+
+    FOREIGN KEY (websiteID)
+    REFERENCES Websites(websiteID),
+
+    CONSTRAINT UQ_Account
+    UNIQUE (userID, websiteID, loginEmail)
+);
   ```
  </details>
 
