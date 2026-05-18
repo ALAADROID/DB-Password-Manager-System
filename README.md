@@ -124,3 +124,20 @@
 > Accounts → Websites  
 >   
 > Websites → Categories  
+
+
+## Sample records:
+
+| Table             | Suggested Rows |
+| ----------------- | -------------- |
+| Users             | 10             |
+| Categories        | 5              |
+| Websites          | 10             |
+| Accounts          | 10             |
+| Passwords         | 10             |
+| Notes             | 5              |
+| Devices           | 5              |
+| LoginHistory      | 5              |
+| AccessLogs        | 5              |
+| SecurityQuestions | 5              |  
+> Total ≈ 70 records ✅
