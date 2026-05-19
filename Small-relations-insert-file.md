@@ -142,17 +142,15 @@
 
 
 
-/*
-The workflow is:
-Users
-  ↓
-Categories
-  ↓
-Websites
-  ↓
-Accounts
-  ↓
-Passwords
-  ↓
-Other tables
-*/
+### The workflow is:  
+> Users  
+>   ↓  
+> Categories  
+>   ↓  
+> Websites  
+>   ↓  
+> Accounts  
+>   ↓  
+> Passwords  
+>   ↓  
+> Other tables
