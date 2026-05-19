@@ -26,7 +26,7 @@ INSERT INTO Websites VALUES
 (3, 'Akbank', 'https://akbank.com', 2),
 (4, 'Udemy', 'https://udemy.com', 3),
 (5, 'Amazon', 'https://amazon.com', 4),
-(6, 'Netflix', 'https://netflix.com', 5),
+(6, 'Steam', 'https://store.steampowered.com', 5),
 (7, 'YouTube', 'https://youtube.com', 5),
 (8, 'Trendyol', 'https://trendyol.com', 4),
 (9, 'Coursera', 'https://coursera.org', 3),
@@ -37,7 +37,7 @@ INSERT INTO Accounts VALUES
 (1, 1, 1, 'alaa_insta@gmail.com', '2025-05-01'),
 (2, 1, 7, 'alaa_youtube@gmail.com', '2025-05-02'),
 (3, 2, 2, 'naji_fb@gmail.com', '2025-05-03'),
-(4, 2, 6, 'naji_netflix@gmail.com', '2025-05-04'),
+(4, 2, 6, 'naji_steam@gmail.com', '2025-05-04'),
 (5, 3, 3, 'jibreel_bank@gmail.com', '2025-05-05'),
 (6, 4, 4, 'muhammad_udemy@gmail.com', '2025-05-06'),
 (7, 5, 5, 'ahmed_amazon@gmail.com', '2025-05-07'),
@@ -46,7 +46,7 @@ INSERT INTO Accounts VALUES
 (10, 8, 1, 'omar_insta@gmail.com', '2025-05-10'),
 (11, 8, 7, 'omar_youtube@gmail.com', '2025-05-11'),
 (12, 9, 9, 'yusuf_course@gmail.com', '2025-05-12'),
-(13, 10, 6, 'ibrahim_netflix@gmail.com', '2025-05-13'),
+(13, 10, 6, 'ibrahim_steam@gmail.com', '2025-05-13'),
 (14, 3, 5, 'jibreel_shop@gmail.com', '2025-05-14'),
 (15, 5, 3, 'ahmed_bank@gmail.com', '2025-05-15');
 
@@ -55,7 +55,7 @@ INSERT INTO Passwords VALUES
 (1, 1, 'encInstagramA1', '2025-05-11'),
 (2, 2, 'encYoutubeA2', '2025-05-12'),
 (3, 3, 'encFacebookN1', '2025-05-13'),
-(4, 4, 'encNetflixN2', '2025-05-14'),
+(4, 4, 'encSteamN2', '2025-05-14'),
 (5, 5, 'encAkbankJ1', '2025-05-15'),
 (6, 6, 'encUdemyM1', '2025-05-16'),
 (7, 7, 'encAmazonA1', '2025-05-17'),
@@ -64,7 +64,7 @@ INSERT INTO Passwords VALUES
 (10, 10, 'encInstagramO1', '2025-05-20'),
 (11, 11, 'encYoutubeO2', '2025-05-21'),
 (12, 12, 'encCourseY1', '2025-05-22'),
-(13, 13, 'encNetflixI1', '2025-05-23'),
+(13, 13, 'encSteamI1', '2025-05-23'),
 (14, 14, 'encAmazonJ2', '2025-05-24'),
 (15, 15, 'encAkbankA2', '2025-05-25');
 
