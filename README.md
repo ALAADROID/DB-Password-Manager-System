@@ -128,16 +128,16 @@
 
 ## Sample records:
 
-| Table             | Suggested Rows |
-| ----------------- | -------------- |
-| Users             | 10             |
-| Categories        | 5              |
-| Websites          | 10             |
-| Accounts          | 10             |
-| Passwords         | 10             |
-| Notes             | 5              |
-| Devices           | 5              |
-| LoginHistory      | 5              |
-| AccessLogs        | 5              |
-| SecurityQuestions | 5              |  
-> Total ≈ 70 records ✅
+| Table             | Rows |
+| ----------------- | ---- |
+| Users             | 10   |
+| Categories        | 5    |
+| Websites          | 10   |
+| Accounts          | 15   |
+| Passwords         | 15   |
+| Notes             | 10   |
+| Devices           | 10   |
+| LoginHistory      | 10   |
+| AccessLogs        | 10   |
+| SecurityQuestions | 10   |
+> Total ≈ 95 records ✅
