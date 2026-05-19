@@ -4,10 +4,9 @@
 <details>
   <summary>Show Code</summary>  <br>
 
-  ```sql  
-  /*(userID, username, email, masterPassword, createdAt)*/
-  
+  ```sql    
   INSERT INTO Users VALUES
+  /*(userID, username, email, masterPassword, createdAt)*/
   (1, 'Alaa', 'alaa@gmail.com', 'encPass123', '2025-05-01'),
   (2, 'Naji', 'naji@gmail.com', 'encPass456', '2025-05-02'),
   (3, 'Jibreel', 'jibreel@gmail.com', 'encPass789', '2025-05-03'),
@@ -26,9 +25,8 @@
   <summary>Show Code</summary>  <br>
 
   ```sql
-  /*(categoryID, categoryName)*/
-  
   INSERT INTO Categories VALUES
+  /*(categoryID, categoryName)*/
   (1, 'Social Media'),
   (2, 'Banking'),
   (3, 'Education'),
@@ -42,9 +40,8 @@
   <summary>Show Code</summary>  <br>
 
   ```sql
-  /*(websiteID, websiteName, websiteURL, categoryID)*/
-  
   INSERT INTO Websites VALUES
+  /*(websiteID, websiteName, websiteURL, categoryID)*/
   (1, 'Instagram', 'https://instagram.com', 1),
   (2, 'Facebook', 'https://facebook.com', 1),
   (3, 'Akbank', 'https://akbank.com', 2),
@@ -63,9 +60,8 @@
   <summary>Show Code</summary>  <br>
 
   ```sql
-  /*(accountID, userID, websiteID, loginEmail, createdAt)*/
-  
   INSERT INTO Accounts VALUES
+  /*(accountID, userID, websiteID, loginEmail, createdAt)*/
   (1, 1, 1, 'alaa_insta@gmail.com', '2025-05-01'),
   (2, 1, 7, 'alaa_youtube@gmail.com', '2025-05-02'),
   (3, 2, 2, 'naji_fb@gmail.com', '2025-05-03'),
