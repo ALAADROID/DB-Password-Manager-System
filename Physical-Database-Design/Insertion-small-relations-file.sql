@@ -1,6 +1,5 @@
 -- 1. Populating Users
-INSERT INTO Users
-(userID, username, email, masterPassword, createdAt) VALUES
+INSERT INTO Users (userID, username, email, masterPassword, createdAt) VALUES
 (1, 'Alaa', 'alaa@gmail.com', 'encPass123', '2025-05-01'),
 (2, 'Naji', 'naji@gmail.com', 'encPass456', '2025-05-02'),
 (3, 'Jibreel', 'jibreel@gmail.com', 'encPass789', '2025-05-03'),
@@ -13,8 +12,7 @@ INSERT INTO Users
 (10, 'Ibrahim', 'ibrahim@gmail.com', 'encPass852', '2025-05-10');
 
 -- 2. Populating Categories
-INSERT INTO Categories
-  (categoryID, categoryName) VALUES
+INSERT INTO Categories (categoryID, categoryName) VALUES
 (1, 'Social Media'),
 (2, 'Banking'),
 (3, 'Education'),
