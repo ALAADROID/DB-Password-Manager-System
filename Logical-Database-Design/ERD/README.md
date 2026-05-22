@@ -1,11 +1,6 @@
-
-
-<video src="assets/Live-EDR.mp4" autoplay loop muted playsinline width="600">
+<video src="https://github.com/ALAADROID/DB-Password-Manager-System/raw/main/Logical-Database-Design/ERD/Live-ERD.mp4" autoplay loop muted playsinline width="600">
   Your browser does not support the video tag.
 </video>
-
-
-
 
 
 
