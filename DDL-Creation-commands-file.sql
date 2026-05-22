@@ -1,4 +1,9 @@
 CREATE DATABASE PasswordManagerDB;
+GO
+
+USE PasswordManagerDB;
+GO
+
 
 Create TABLE Users(
 	userID INT PRIMARY KEY, 
@@ -7,11 +12,13 @@ Create TABLE Users(
 	masterPassword VARCHAR(255) NOT NULL,
 	createdAt DATE
 );
+GO
 
 CREATE TABLE Categories (
     categoryID INT PRIMARY KEY,
     categoryName VARCHAR(50) NOT NULL
 );
+GO
 
 CREATE TABLE Websites (
     websiteID INT PRIMARY KEY,
@@ -22,6 +29,7 @@ CREATE TABLE Websites (
     FOREIGN KEY (categoryID)
     REFERENCES Categories(categoryID)
 );
+GO
 
 CREATE TABLE Accounts (
   accountID INT PRIMARY KEY,
@@ -39,6 +47,7 @@ CREATE TABLE Accounts (
   CONSTRAINT UQ_Account
   UNIQUE (userID, websiteID, loginEmail)
 );
+GO
 
 CREATE TABLE Passwords (
     passwordID INT PRIMARY KEY,
@@ -49,6 +58,7 @@ CREATE TABLE Passwords (
     FOREIGN KEY (accountID)
 	REFERENCES Accounts(accountID)
 );
+GO
 
 CREATE TABLE Notes (
     noteID INT PRIMARY KEY,
@@ -60,6 +70,7 @@ CREATE TABLE Notes (
     FOREIGN KEY (userID)
 	REFERENCES Users(userID)
 );
+GO
 
 CREATE TABLE Devices (
     deviceID INT PRIMARY KEY,
@@ -71,6 +82,7 @@ CREATE TABLE Devices (
     FOREIGN KEY (userID)
 	REFERENCES Users(userID)
 );
+GO
 
 CREATE TABLE LoginHistory (
     loginID INT PRIMARY KEY,
@@ -81,6 +93,7 @@ CREATE TABLE LoginHistory (
     FOREIGN KEY (userID)
 	REFERENCES Users(userID)
 );
+GO
 
 CREATE TABLE AccessLogs (
     logID INT PRIMARY KEY,
@@ -91,6 +104,7 @@ CREATE TABLE AccessLogs (
     FOREIGN KEY (userID) REFERENCES Users(userID),
 	CONSTRAINT CHK_ActionType CHECK (actionType IN ('LOGIN', 'LOGOUT', 'PASSWORD_CREATE', 'PASSWORD_UPDATE', 'PASSWORD_VIEW', 'NOTE_CREATE', 'NOTE_DELETE'))
 );
+GO
 
 CREATE TABLE SecurityQuestions (
     questionID INT PRIMARY KEY,
@@ -101,3 +115,4 @@ CREATE TABLE SecurityQuestions (
     FOREIGN KEY (userID)
 	REFERENCES Users(userID)
 );
+GO
