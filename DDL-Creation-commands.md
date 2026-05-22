@@ -14,11 +14,11 @@
 
   ```sql
   Create TABLE Users(
-  userID INT PRIMARY KEY, 
-  username VARCHAR(50) NOT NULL,
-  email VARCHAR(100) UNIQUE NOT NULL,
-  masterPassword VARCHAR(255) NOT NULL,
-  createdAt DATE
+    userID INT PRIMARY KEY, 
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    masterPassword VARCHAR(255) NOT NULL,
+    createdAt DATE
   );
   ```
  </details>
