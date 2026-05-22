@@ -146,6 +146,7 @@ DELETE FROM Categories
 WHERE categoryID = 5;
   ```
  </details>
+ 
 > Remove a customized category that is no longer being utilized by any system website.
 
 
