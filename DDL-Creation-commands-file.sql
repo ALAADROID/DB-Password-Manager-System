@@ -4,7 +4,6 @@ GO
 USE PasswordManagerDB;
 GO
 
-
 Create TABLE Users(
 	userID INT PRIMARY KEY, 
 	username VARCHAR(50) NOT NULL,
