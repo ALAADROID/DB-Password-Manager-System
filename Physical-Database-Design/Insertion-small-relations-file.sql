@@ -1,4 +1,3 @@
--- 1. Populating Users
 INSERT INTO Users (userID, username, email, masterPassword, createdAt) VALUES
 (1, 'Alaa', 'alaa@gmail.com', 'encPass123', '2025-05-01'),
 (2, 'Naji', 'naji@gmail.com', 'encPass456', '2025-05-02'),
@@ -11,7 +10,6 @@ INSERT INTO Users (userID, username, email, masterPassword, createdAt) VALUES
 (9, 'Yusuf', 'yusuf@gmail.com', 'encPass741', '2025-05-09'),
 (10, 'Ibrahim', 'ibrahim@gmail.com', 'encPass852', '2025-05-10');
 
--- 2. Populating Categories
 INSERT INTO Categories (categoryID, categoryName) VALUES
 (1, 'Social Media'),
 (2, 'Banking'),
@@ -19,7 +17,6 @@ INSERT INTO Categories (categoryID, categoryName) VALUES
 (4, 'Shopping'),
 (5, 'Entertainment');
 
--- 3. Populating Websites
 INSERT INTO Websites (websiteID, websiteName, websiteURL, categoryID) VALUES
 (1, 'Instagram', 'https://instagram.com', 1),
 (2, 'Facebook', 'https://facebook.com', 1),
@@ -32,7 +29,6 @@ INSERT INTO Websites (websiteID, websiteName, websiteURL, categoryID) VALUES
 (9, 'Coursera', 'https://coursera.org', 3),
 (10, 'Twitter', 'https://twitter.com', 1);
 
--- 4. Populating Accounts
 INSERT INTO Accounts (accountID, userID, websiteID, loginEmail, createdAt) VALUES
 (1, 1, 1, 'alaa_insta@gmail.com', '2025-05-01'),
 (2, 1, 7, 'alaa_youtube@gmail.com', '2025-05-02'),
@@ -50,7 +46,6 @@ INSERT INTO Accounts (accountID, userID, websiteID, loginEmail, createdAt) VALUE
 (14, 3, 5, 'jibreel_shop@gmail.com', '2025-05-14'),
 (15, 5, 3, 'ahmed_bank@gmail.com', '2025-05-15');
 
--- 5. Populating Passwords
 INSERT INTO Passwords (passwordID, accountID, encryptedPassword, lastUpdated) VALUES
 (1, 1, 'encInstagramA1', '2025-05-11'),
 (2, 2, 'encYoutubeA2', '2025-05-12'),
@@ -68,7 +63,6 @@ INSERT INTO Passwords (passwordID, accountID, encryptedPassword, lastUpdated) VA
 (14, 14, 'encAmazonJ2', '2025-05-24'),
 (15, 15, 'encAkbankA2', '2025-05-25');
 
--- 6. Populating Notes
 INSERT INTO Notes (noteID, userID, noteTitle, noteContent, createdAt) VALUES
 (1, 1, 'WiFi Password', 'Home WiFi password saved here', '2025-05-01'),
 (2, 2, 'Bank Note', 'Important banking reminder', '2025-05-02'),
@@ -81,7 +75,6 @@ INSERT INTO Notes (noteID, userID, noteTitle, noteContent, createdAt) VALUES
 (9, 9, 'Backup Accounts', 'Emergency recovery emails', '2025-05-09'),
 (10, 10, 'Private Notes', 'Personal password hints', '2025-05-10');
 
--- 7. Populating Devices
 INSERT INTO Devices (deviceID, userID, deviceName, operatingSystem, lastLogin) VALUES
 (1, 1, 'Galaxy A51', 'Android', '2025-05-11 10:00:00'),
 (2, 2, 'iPhone 13', 'iOS', '2025-05-11 11:00:00'),
@@ -94,7 +87,6 @@ INSERT INTO Devices (deviceID, userID, deviceName, operatingSystem, lastLogin) V
 (9, 9, 'iPad Pro', 'iPadOS', '2025-05-11 18:00:00'),
 (10, 10, 'Huawei MateBook', 'Windows 11', '2025-05-11 19:00:00');
 
--- 8. Populating LoginHistory
 INSERT INTO LoginHistory (loginID, userID, loginDate, ipAddress) VALUES
 (1, 1, '2025-05-01 08:30:00', '192.168.1.1'),
 (2, 2, '2025-05-01 09:15:00', '192.168.1.2'),
@@ -107,7 +99,6 @@ INSERT INTO LoginHistory (loginID, userID, loginDate, ipAddress) VALUES
 (9, 9, '2025-05-05 16:40:00', '192.168.1.9'),
 (10, 10, '2025-05-05 17:30:00', '192.168.1.10');
 
--- 9. Populating AccessLogs (Fixed CHECK Constraint Tokens)
 INSERT INTO AccessLogs (logID, userID, actionType, actionTime) VALUES
 (1, 1, 'PASSWORD_VIEW', '2025-05-01 08:35:00'),
 (2, 2, 'PASSWORD_CREATE', '2025-05-01 09:20:00'),
@@ -120,7 +111,6 @@ INSERT INTO AccessLogs (logID, userID, actionType, actionTime) VALUES
 (9, 9, 'PASSWORD_VIEW', '2025-05-05 16:45:00'),
 (10, 10, 'LOGOUT', '2025-05-05 17:40:00');
 
--- 10. Populating SecurityQuestions
 INSERT INTO SecurityQuestions (questionID, userID, question, answer) VALUES
 (1, 1, 'What is your favorite color?', 'Blue'),
 (2, 2, 'What is your first school?', 'Al Noor'),
