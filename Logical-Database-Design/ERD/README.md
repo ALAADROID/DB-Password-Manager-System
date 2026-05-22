@@ -1,5 +1,5 @@
-<video src="https://github.com/ALAADROID/DB-Password-Manager-System/raw/main/Logical-Database-Design/ERD/Live-ERD.mp4" autoplay loop muted playsinline style="max-width:100%; height:auto;">
-</video>
+![Live ERD](https://github.com/ALAADROID/DB-Password-Manager-System/raw/main/Logical-Database-Design/ERD/Live-ERD.gif)
+
 
 
 
