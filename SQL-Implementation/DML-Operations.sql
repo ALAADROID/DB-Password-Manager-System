@@ -19,34 +19,38 @@ UPDATE Users
 SET masterPassword = 'secureNewPass2026' 
 WHERE userID = 2;
 
--- 6. [UPDATE] An administrator updates the structural URL of Twitter to reflect its modern 'x.com' domain.
+-- 6. [UPDATE] An administrator processes global domain infrastructure routing adjustments. Update Twitter records dynamically using SQL Pattern Matching (LIKE).
 UPDATE Websites 
 SET websiteURL = 'https://x.com', 
-    websiteName = 'X (Twitter)' 
+  websiteName = 'X (Twitter)' 
 WHERE websiteURL LIKE '%twitter.com%';
 
--- 7. [UPDATE] User 'Jibreel' updates his stored banking account login email to his corporate address.
+-- 7. [UPDATE] User 'Jibreel' transitions his banking credentials to a secure workspace address. Discover and update his row dynamically via nested lookup structures.
 UPDATE Accounts 
 SET loginEmail = 'jibreel_corp@bank.com' 
-WHERE accountID = 5;
+WHERE userID = (SELECT userID FROM Users WHERE username = 'Jibreel')
+AND websiteID = (SELECT websiteID FROM Websites WHERE websiteName = 'Akbank');
 
--- 8. [UPDATE] Refresh the password lifecycle timestamp when an entry's encrypted string is updated.
+-- 8. [UPDATE] Enforce corporate governance password lifecycle intervals by refreshing stale parameters to current time frameworks.
 UPDATE Passwords 
-SET lastUpdated = '2026-05-22' 
-WHERE accountID = 1;
+SET lastUpdated = '2026-05-22'
+WHERE lastUpdated IN (SELECT lastUpdated FROM Passwords WHERE lastUpdated < '2025-05-15');
 
--- 9. [DELETE] User 'Mustafa' (userID 6) removes an old, unlinked mobile device from his profile.
+-- 9. [DELETE] Purge corrupted hardware link registrations belonging to user clusters utilizing nested relational logic filters.
 DELETE FROM Devices 
-WHERE deviceID = 6 AND userID = 6;
+WHERE userID = (SELECT userID FROM Users WHERE username = 'Mustafa') 
+AND operatingSystem = 'Windows 10';
 
 -- 10. [DELETE] A user purges a compromised vault item entry from their dashboard.
 DELETE FROM Passwords 
 WHERE accountID = 10;
 
--- 11. [DELETE] Clean up old login history sessions from early May 2025 to optimize space.
-DELETE FROM LoginHistory 
-WHERE loginDate < '2025-05-02 00:00:00';
+-- 11. [ALTER] Evolve the system physical schema layout dynamically by adding an encryption status bit flag column to the Devices table.
+ALTER TABLE Devices ADD isEncrypted INT DEFAULT 1;
 
--- 12. [DELETE] Remove a customized category that is no longer being utilized by any system website.
-DELETE FROM Categories 
-WHERE categoryID = 5;
+-- 12. [DROP] Execute security compliance cleanups by removing a testing configuration metadata view schema boundary layout safely.
+-- Creating a view to instantly drop it for demonstration of schema management commands
+CREATE VIEW TemporaryTestingView AS SELECT username FROM Users;
+GO
+DROP VIEW TemporaryTestingView;
+GO
