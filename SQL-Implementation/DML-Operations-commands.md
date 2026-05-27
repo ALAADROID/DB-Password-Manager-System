@@ -67,7 +67,8 @@ WHERE userID = 2;
 
   ```sql
 UPDATE Websites 
-SET websiteURL = 'https://x.com' 
+SET websiteURL = 'https://x.com',
+    websiteName = 'X'  
 WHERE websiteName = 'Twitter';
   ```
  </details>
