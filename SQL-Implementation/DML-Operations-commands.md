@@ -73,7 +73,7 @@ WHERE websiteURL LIKE '%twitter.com%';
   ```
  </details>
 
- > An administrator updates the structural URL of Twitter to reflect its modern 'x.com' domain.
+ > An administrator processes global domain infrastructure routing adjustments. Update Twitter records dynamically using SQL Pattern Matching (LIKE).
 
 ### 7️⃣ UPDATE:
 <details>
@@ -82,11 +82,12 @@ WHERE websiteURL LIKE '%twitter.com%';
   ```sql
 UPDATE Accounts 
 SET loginEmail = 'jibreel_corp@bank.com' 
-WHERE accountID = 5;
+WHERE userID = (SELECT userID FROM Users WHERE username = 'Jibreel')
+  AND websiteID = (SELECT websiteID FROM Websites WHERE websiteName = 'Akbank');
   ```
  </details>
 
- > User 'Jibreel' updates his stored banking account login email to his corporate address.
+ > User 'Jibreel' transitions his banking credentials to a secure workspace address. Discover and update his row dynamically via nested lookup structures.
 
 ### 8️⃣ UPDATE:
 <details>
@@ -94,12 +95,12 @@ WHERE accountID = 5;
 
   ```sql
 UPDATE Passwords 
-SET lastUpdated = '2026-05-22' 
-WHERE accountID = 1;
+SET lastUpdated = '2026-05-22'
+WHERE lastUpdated IN (SELECT lastUpdated FROM Passwords WHERE lastUpdated < '2025-05-15');
   ```
  </details>
 
- > Refresh the password lifecycle timestamp when an entry's encrypted string is updated.
+ > Enforce corporate governance password lifecycle intervals by refreshing stale parameters to current time frameworks.
 
  
 ### 9️⃣ DELETE:
@@ -108,11 +109,12 @@ WHERE accountID = 1;
 
   ```sql
 DELETE FROM Devices 
-WHERE deviceID = 6 AND userID = 6;
+WHERE userID = (SELECT userID FROM Users WHERE username = 'Mustafa') 
+  AND operatingSystem = 'Windows 10';
   ```
  </details>
 
- > User 'Mustafa' (userID 6) removes an old, unlinked mobile device from his profile.
+ > Purge corrupted hardware link registrations belonging to user clusters utilizing nested relational logic filters.
  
 ### 🔟 DELETE:
 <details>
@@ -126,29 +128,31 @@ WHERE accountID = 10;
 
  > A user purges a compromised vault item entry from their dashboard.
 
-### 1️⃣1️⃣ DELETE:
+### 1️⃣1️⃣ ALTER:
 <details>
   <summary>Show Code</summary>  <br>
 
   ```sql
-DELETE FROM LoginHistory 
-WHERE loginDate < '2025-05-02 00:00:00';
+ALTER TABLE Devices ADD isEncrypted INT DEFAULT 1;
   ```
  </details>
 
- > Clean up old login history sessions from early May 2025 to optimize space.
+ > Evolve the system physical schema layout dynamically by adding an encryption status bit flag column to the Devices table.
 
-### 1️⃣2️⃣ DELETE:
+### 1️⃣2️⃣ DROP:
 <details>
   <summary>Show Code</summary>  <br>
 
   ```sql
-DELETE FROM Categories 
-WHERE categoryID = 5;
+-- Creating a view to instantly drop it for demonstration of schema management commands
+CREATE VIEW TemporaryTestingView AS SELECT username FROM Users;
+GO
+DROP VIEW TemporaryTestingView;
+GO
   ```
  </details>
  
-> Remove a customized category that is no longer being utilized by any system website.
+> Execute security compliance cleanups by removing a testing configuration metadata view schema boundary layout safely.
 
 
 
