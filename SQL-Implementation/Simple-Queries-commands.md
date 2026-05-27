@@ -20,11 +20,12 @@ ORDER BY categoryName ASC;
   ```sql
 SELECT deviceName, userID, lastLogin 
 FROM Devices 
-WHERE operatingSystem = 'Windows 11';
+WHERE operatingSystem LIKE 'Windows%' 
+  AND lastLogin BETWEEN '2025-05-01' AND '2025-05-31 23:59:59';
   ```
  </details>
 
-> Identify all recorded user hardware devices currently running on the 'Windows 11' operating system.
+> Isolate active workstations interacting with the engine database running on Windows systems within structural time bounds.
 
 ### 3️⃣:
 <details>
@@ -33,11 +34,11 @@ WHERE operatingSystem = 'Windows 11';
   ```sql
 SELECT websiteName, websiteURL 
 FROM Websites 
-WHERE categoryID = 4;
+WHERE categoryID IN (4);
   ```
  </details>
 
-> Retrieve all tracked websites that fall specifically within the 'Shopping' category (categoryID = 4).
+> Group administrative resource domain locators cataloged under specific shopping sectors using predicate set arrays.
 
 ### 4️⃣:
 <details>
@@ -46,50 +47,52 @@ WHERE categoryID = 4;
   ```sql
 SELECT noteTitle, noteContent 
 FROM Notes 
-WHERE noteTitle LIKE '%Password%';
+WHERE noteTitle LIKE '%Password%' 
+   OR noteContent LIKE '%Key%' 
+   OR noteContent LIKE '%Backup%';
   ```
  </details>
 
- > Search the vault for any secure notes that contain the keyword 'Password' in their header title.
+ > Perform a deep scanning pass over text blocks to pull records with sensitive administrative references.
 
 ### 5️⃣:
 <details>
   <summary>Show Code</summary>  <br>
 
   ```sql
-SELECT TOP 5 loginID, userID, loginDate, ipAddress 
-FROM LoginHistory 
-ORDER BY loginDate DESC;
+SELECT username, email, createdAt
+FROM Users
+WHERE createdAt > '2025-05-05';
   ```
  </details>
 
- > Fetch the top 5 most recent master system login attempts to audit active session entries.
+ > Isolate system users registered after early startup benchmarks using absolute date predicate criteria.
 
 ### 6️⃣:
 <details>
   <summary>Show Code</summary>  <br>
 
   ```sql
-SELECT username, email, createdAt 
-FROM Users 
-WHERE createdAt > '2025-05-05';
+SELECT logID, userID, actionTime
+FROM AccessLogs
+WHERE actionType = 'PASSWORD_VIEW';
   ```
  </details>
 
- > Extract a list of all registered users who joined the service after '2025-05-05'.
+ > Generate a security exceptions audit trail tracking only high-profile password extraction events.
 
 ### 7️⃣:
 <details>
   <summary>Show Code</summary>  <br>
 
   ```sql
-SELECT logID, userID, actionTime 
-FROM AccessLogs 
-WHERE actionType = 'PASSWORD_VIEW';
+SELECT accountID, loginEmail, createdAt 
+FROM Accounts 
+WHERE accountID NOT IN (SELECT accountID FROM Passwords);
   ```
  </details>
 
- > Display all security tracking logs where the operational action was strictly a 'PASSWORD_VIEW' event.
+ > Execute an operational audit scanning for account profiles currently sitting vacant without any associated security string profiles.
 
 
 
