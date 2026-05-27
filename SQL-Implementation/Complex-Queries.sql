@@ -16,21 +16,26 @@ SELECT userID, COUNT(logID) AS SensitiveActionsCount
 FROM AccessLogs
 WHERE actionType IN ('PASSWORD_VIEW', 'PASSWORD_UPDATE')
 GROUP BY userID
-HAVING COUNT(logID) > 2;
+HAVING COUNT(logID) >= 2;
 
 
-SELECT accountID, loginEmail 
-FROM Accounts
-WHERE accountID NOT IN (
-    SELECT accountID 
-    FROM Passwords
-);
+WITH UserLogCount AS (
+  SELECT userID, COUNT(logID) AS UserLogs 
+  FROM AccessLogs 
+  GROUP BY userID
+)
+SELECT SummaryTable.userID, SummaryTable.UserLogs
+FROM (
+  SELECT userID, UserLogs 
+  FROM UserLogCount
+) AS SummaryTable
+WHERE SummaryTable.UserLogs > (SELECT AVG(UserLogs) FROM UserLogCount);
 
 
-SELECT U.username, C.categoryName, COUNT(A.accountID) AS SecureAccountsCount
-FROM Users U
-JOIN Accounts A ON U.userID = A.userID
-JOIN Websites W ON A.websiteID = W.websiteID
-JOIN Categories C ON W.categoryID = C.categoryID
-WHERE C.categoryName IN ('Banking', 'Social Media')
-GROUP BY U.username, C.categoryName;
+CREATE VIEW HighRiskBankingProfiles AS
+SELECT loginEmail FROM Accounts WHERE websiteID = 3
+INTERSECT
+SELECT loginEmail FROM Accounts WHERE websiteID = 5;
+GO
+-- To run live during the presentation demo:
+SELECT * FROM HighRiskBankingProfiles;
