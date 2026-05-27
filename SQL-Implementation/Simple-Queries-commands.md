@@ -52,7 +52,7 @@ WHERE noteTitle LIKE '%Password%';
 
  > Search the vault for any secure notes that contain the keyword 'Password' in their header title.
 
-### 5️⃣ UPDATE:
+### 5️⃣:
 <details>
   <summary>Show Code</summary>  <br>
 
