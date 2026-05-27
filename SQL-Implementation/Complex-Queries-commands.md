@@ -1,5 +1,5 @@
 
-## Simple Queries (7 Queries):
+## Complex Queries (5 Queries):
 
 ### 1️⃣ EXPLICIT JOIN:
 <details>
