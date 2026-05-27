@@ -21,7 +21,8 @@ WHERE userID = 2;
 
 -- 6. [UPDATE] An administrator updates the structural URL of Twitter to reflect its modern 'x.com' domain.
 UPDATE Websites 
-SET websiteURL = 'https://x.com' 
+SET websiteURL = 'https://x.com',
+    websiteName = 'X'  
 WHERE websiteName = 'Twitter';
 
 -- 7. [UPDATE] User 'Jibreel' updates his stored banking account login email to his corporate address.
