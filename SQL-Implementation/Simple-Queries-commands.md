@@ -1,6 +1,6 @@
 ## Simple Queries (7 Queries):
 
-### 1️⃣ INSERT:
+### 1️⃣:
 <details>
   <summary>Show Code</summary>  <br>
 
@@ -13,7 +13,7 @@ ORDER BY categoryName ASC;
  
  > List all configured website categories in alphabetical order.
 
-### 2️⃣ INSERT:
+### 2️⃣:
 <details>
   <summary>Show Code</summary>  <br>
 
@@ -26,7 +26,7 @@ WHERE operatingSystem = 'Windows 11';
 
 > Identify all recorded user hardware devices currently running on the 'Windows 11' operating system.
 
-### 3️⃣ INSERT:
+### 3️⃣:
 <details>
   <summary>Show Code</summary>  <br>
 
@@ -39,7 +39,7 @@ WHERE categoryID = 4;
 
 > Retrieve all tracked websites that fall specifically within the 'Shopping' category (categoryID = 4).
 
-### 4️⃣ INSERT:
+### 4️⃣:
 <details>
   <summary>Show Code</summary>  <br>
 
@@ -65,7 +65,7 @@ ORDER BY loginDate DESC;
 
  > Fetch the top 5 most recent master system login attempts to audit active session entries.
 
-### 6️⃣ UPDATE:
+### 6️⃣:
 <details>
   <summary>Show Code</summary>  <br>
 
@@ -78,7 +78,7 @@ WHERE createdAt > '2025-05-05';
 
  > Extract a list of all registered users who joined the service after '2025-05-05'.
 
-### 7️⃣ UPDATE:
+### 7️⃣:
 <details>
   <summary>Show Code</summary>  <br>
 
