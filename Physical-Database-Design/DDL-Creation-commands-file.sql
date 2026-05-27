@@ -50,7 +50,7 @@ GO
 
 CREATE TABLE Passwords (
     passwordID INT PRIMARY KEY,
-    accountID INT UNIQUE,
+    accountID INT UNIQUE NOT NULL,
     encryptedPassword VARCHAR(255) NOT NULL,
     lastUpdated DATE,
 
