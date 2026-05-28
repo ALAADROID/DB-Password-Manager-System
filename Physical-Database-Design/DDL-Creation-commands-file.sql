@@ -63,7 +63,7 @@ CREATE TABLE Notes (
     noteID INT PRIMARY KEY,
     userID INT NOT NULL,
     noteTitle VARCHAR(100) NOT NULL,
-    noteContent TEXT,
+    noteContent VARCHAR(MAX),
     createdAt DATE,
 
     FOREIGN KEY (userID)
