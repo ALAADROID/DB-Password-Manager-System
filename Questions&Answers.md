@@ -86,3 +86,74 @@ from Accounts
 order by createdAt asc;
 ```
 
+<br>
+
+### The Question (INSERTING):
+- How can the system register a secondary device profile ('iPad Air') for verification under user 2?
+```sql
+INSERT INTO Devices (deviceID, userID, deviceName, operatingSystem, lastLogin)
+VALUES (11, 2, 'iPad Air', 'iPadOS', '2026-05-22 15:30:00');
+```
+
+<br>
+
+### The Question (INSERTING):
+- How can the system register a secondary device profile ('iPad Air') for verification under user 2?
+```sql
+INSERT INTO Devices (deviceID, userID, deviceName, operatingSystem, lastLogin)
+VALUES (11, 2, 'iPad Air', 'iPadOS', '2026-05-22 15:30:00');
+```
+
+<br>
+
+### The Question (UPDATING):
+- How can a user named 'Naji' dynamically update his master password secret to 'secureNewPass2026' to maintain account security?
+```sql
+UPDATE Users
+SET masterPassword = 'secureNewPass2026'
+WHERE username = 'Naji';
+```
+
+<br>
+
+### The Question (UPDATING):
+- How can user 'Jibreel' update his login email specifically for his 'Akbank' credential record?
+```sql
+UPDATE Accounts
+SET loginEmail = 'jibreel_corp@bank.com'
+WHERE userID = (SELECT userID FROM Users WHERE username = 'Jibreel')
+  AND websiteID = (SELECT websiteID FROM Websites WHERE websiteName = 'Akbank');
+```
+
+<br>
+
+### The Question (UPDATING):
+- How can user 'Jibreel' update his login email specifically for his 'Akbank' credential record?
+```sql
+update Accounts
+set loginEmail = 'jibreel_corp@bank.com'
+where userID = (select userID from users where username='Jibreel')
+	and websiteID = (select websiteID from Websites where websiteName='Akbank');
+```
+
+<br>
+
+### The Question (UPDATING):
+- How can the administrator log a mandatory security baseline compliance update for all passwords not modified since 15-5-2025?
+```sql
+UPDATE Passwords
+SET lastUpdated = '2026-05-22'
+WHERE lastUpdated < '2025-05-15';
+```
+
+<br>
+
+### The Question (DELETING):
+- How can the system completely delete a 'Windows 10' hardware endpoint profile belonging to user 'Mustafa'?
+```sql
+DELETE FROM Devices
+WHERE operatingSystem = 'Windows 10'
+  AND userID = (SELECT userID FROM Users WHERE username = 'Mustafa');
+```
+
+
