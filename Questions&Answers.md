@@ -6,6 +6,8 @@ FROM Users
 WHERE createdAt > '2025-05-05';
 ```
 
+<br>
+
 ### The Question (Multi-Join & Aliases):
 - I want to see a list of usernames, and next to each user, show the name of the website they have an account on.
 ```sql
@@ -22,6 +24,8 @@ JOIN Accounts ON U.userID = Accounts.userID
 JOIN Websites ON Wwebsites.websiteID = Accounts.websiteID;
 ```
 
+<br>
+
 ### The Question (GROUP BY):
 - I want to count how many logs each user has. Show me the userID and the total count of their logs from the AccessLogs table.
 ```sql
@@ -29,6 +33,8 @@ SELECT userID, COUNT(logID) AS TotalLogs
 FROM AccessLogs
 GROUP BY userID;
 ```
+
+<br>
 
 ### The Question (HAVING):
 - Show me ONLY the users who have a total count of 2 or more logs.
@@ -38,3 +44,6 @@ FROM AccessLogs
 GROUP BY userID
 HAVING COUNT(logID) >= 2;
 ```
+
+<br>
+
