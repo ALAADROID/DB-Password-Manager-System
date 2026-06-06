@@ -156,4 +156,44 @@ WHERE operatingSystem = 'Windows 10'
   AND userID = (SELECT userID FROM Users WHERE username = 'Mustafa');
 ```
 
+<br>
+
+### The Question (DELETING):
+- How can a user completely remove a compromised password record from their dashboard using its account ID reference?
+```sql
+DELETE FROM Passwords
+WHERE accountID = 10;
+```
+
+<br>
+
+### The Question (DELETING):
+- How can we dynamically evolve our device database schema by adding a new status flag column for encryption tracking?
+```sql
+alter table devices
+add isEncrypted INT DEFAULT 1;
+```
+
+<br>
+
+### The Question (DELETING):
+- How can an administrator demonstrate safe environment management by creating a temporary schema view and instantly dropping it?
+```sql
+create view tempView as
+select username from users;
+go
+
+select * from tempView;
+go
+```
+
+<br>
+
+### The Question (DELETING):
+- How can the system retrieve a complete directory of all available platform categories arranged in alphabetical order?
+```sql
+alter table devices
+add isEncrypted INT DEFAULT 1;
+```
+
 
