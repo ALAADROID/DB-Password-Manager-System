@@ -47,3 +47,11 @@ HAVING COUNT(logID) >= 2;
 
 <br>
 
+### The Question (LIKE, OR):
+- I want to find all websites where the URL either contains the word 'google' OR contains the word 'crypto'. Show me the websiteName and the websiteURL.
+```sql
+SELECT websiteName, websiteURL
+FROM Websites
+WHERE websiteURL LIKE '%google%' 
+   OR websiteURL LIKE '%crypto%';
+```
