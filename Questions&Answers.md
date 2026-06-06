@@ -30,7 +30,7 @@ FROM AccessLogs
 GROUP BY userID;
 ```
 
-## The Question (HAVING):
+### The Question (HAVING):
 - Excellent Alaa! Now, show me ONLY the users who have a total count of 2 or more logs.
 ```sql
 SELECT userID, COUNT(logID) AS TotalLogs
