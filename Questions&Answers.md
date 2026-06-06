@@ -55,3 +55,34 @@ FROM Websites
 WHERE websiteURL LIKE '%google%' 
    OR websiteURL LIKE '%crypto%';
 ```
+
+<br>
+
+### The Question (AND):
+- We noticed a typo in our database. The user with userID = 1 changed their login email for their account on 'Google'. I want you to UPDATE their loginEmail in the Accounts table to be 'alaa.droid@gmail.com'. But wait, you must make sure you only update the account where websiteID = 3 (which is Google's ID)."websiteURL.
+```sql
+UPDATE Accounts
+SET loginEmail = 'alaa.droid@gmail.com'
+WHERE userID = 1 AND websiteID = 3;
+```
+
+<br>
+
+### The Question (AND):
+- We noticed a typo in our database. The user with userID = 1 changed their login email for their account on 'Google'. I want you to UPDATE their loginEmail in the Accounts table to be 'alaa.droid@gmail.com'. But wait, you must make sure you only update the account where websiteID = 3 (which is Google's ID)."websiteURL.
+```sql
+UPDATE Accounts
+SET loginEmail = 'alaa.droid@gmail.com'
+WHERE userID = 1 AND websiteID = 3;
+```
+
+<br>
+
+### The Question (TOP, ORDER BY):
+- I want to see the top 3 oldest accounts created in our system. Show me the accountID, userID, and createdAt from the Accounts table, and make sure the oldest one appears first.
+```sql
+select top 3 accountID, userID, createdAt
+from Accounts
+order by createdAt asc;
+```
+
