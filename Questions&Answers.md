@@ -192,8 +192,9 @@ go
 ### The Question (DELETING):
 - How can the system retrieve a complete directory of all available platform categories arranged in alphabetical order?
 ```sql
-alter table devices
-add isEncrypted INT DEFAULT 1;
+select categoryName
+from Categories
+order by categoryName ASC;
 ```
 
 
