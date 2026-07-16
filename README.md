@@ -39,6 +39,18 @@ A relational database project designed for secure password management using Micr
 
 ---
 
+## Entity Relationship Diagram
+
+![ER Diagram](assets/tables/All.png)
+
+---
+
+### Live ER Diagram
+
+![ER Diagram](assets/Live-ERD.gif)
+
+---
+
 ## Project Structure
 
 ```text
