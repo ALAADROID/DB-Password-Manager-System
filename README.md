@@ -1,5 +1,12 @@
 # Password Manager Database System (SQL Server)
 
+
+![SQL Server](https://img.shields.io/badge/SQL%20Server-Database-red)
+![Database](https://img.shields.io/badge/Database-Relational-blue)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![License](https://img.shields.io/badge/License-Apache%202.0-blue)
+
+
 A relational database project designed for secure password management using Microsoft SQL Server. The system demonstrates database design principles, normalization, relational modeling, constraints, and SQL query implementation through a realistic password management application.
 
 ---
