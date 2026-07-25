@@ -5,7 +5,7 @@
 ![Database](https://img.shields.io/badge/Database-Relational-blue)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue)
-
+![University Project](https://img.shields.io/badge/University-Project-informational)
 
 A relational database project designed for secure password management using Microsoft SQL Server. The system demonstrates database design principles, normalization, relational modeling, constraints, and SQL query implementation through a realistic password management application.
 
